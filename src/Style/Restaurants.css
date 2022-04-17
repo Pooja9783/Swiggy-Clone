@@ -1,0 +1,100 @@
+.restaurants {
+  margin-top: 30px !important;
+}
+.restaurants .content {
+  width: 80%;
+  margin: auto !important;
+  display: flex;
+  justify-content: space-between;
+}
+.restaurants .left-content {
+}
+
+.restaurants .right-content {
+  display: flex;
+}
+
+.restaurants .right-content > p {
+  margin: 10px 20px !important;
+  font-weight: 500;
+  cursor: pointer;
+}
+.restaurants .right-content > p:active {
+  border-bottom: 1px solid red;
+}
+.restaurants hr {
+  width: 80%;
+  height: 1px;
+  margin: auto !important;
+}
+
+.restaurants .data {
+  width: 84%;
+  margin: 20px auto !important;
+  /* background : rgb(92, 92, 105); */
+}
+
+.restaurants .display-data {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.restaurants .card-card {
+  margin: 20px auto !important;
+  height: 340px;
+  border: 1px solid white;
+  padding: 20px !important;
+}
+.restaurants .card-card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+.restaurants img {
+  width: 275px;
+}
+.restaurants .all-data {
+  margin: 5px 0px !important;
+  /* background: rosybrown; */
+}
+.restaurants .all-data .text h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.restaurants .all-data .text p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 5px 0px !important;
+}
+.restaurants .flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px auto !important;
+}
+
+.restaurants .rating {
+  background: rgb(53, 196, 124);
+  width: 40px;
+  color: white;
+  font-weight: 600 !important;
+}
+
+.restaurants .flex p {
+  font-size: 14px;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: #282c3f;
+}
+a:hover {
+  color: #282c3f;
+}
+.restaurants hr {
+  margin: 18px auto !important;
+  width: 100%;
+}
+
+.restaurants .coupon {
+  color: #8a584b;
+  font-weight: 400;
+}

@@ -1,0 +1,551 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zypbdvjlve1n8wm5rjyt",
+      "title": "AUNTIE FUNG'S",
+
+      "food": [
+        {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/idjuf6q7pff1r99icrdw",
+          "foodname": "Veg. Crystal Dimsums",
+          "foodprice": 249,
+          "fooddes": "Needs no introduction- bite size steamed dumplings stuffed with corn, spinach & other vegetables in Asian flavours and served with Auntie's in-house XO sauce"
+        },
+          {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/fxj8yq5oxihj6ctpcsc5",
+          "foodname": "Broccoli & Shitake Mushroom Stir Fry",
+          "foodprice": 289,
+          "fooddes": "Shitake mushroom, brocolli florets & other exotic greens, stir fried with Asian herbs and finished with hint of oystar sauce"
+        },
+          {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/leza4muz7khmkfsmmuhm",
+          "foodname": "Thai Nam Prik Chicken",
+          "foodprice": 289,
+          "fooddes": "Slices of chicken wok tossed in a popular Thai paste made of dried chilly, garlic, shallots, lime juice, sure to set your taste buds on fire"
+        }
+
+      ],
+      "type": "Asian, Chinese",
+      "rating": 3.8,
+      "time": 54,
+      "rate": 500,
+      "coupon": "50% off | Use WELCOME50"
+    },
+
+    {
+      "id": 2,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mdipoyzfzsa7n7igskht",
+      "title": "Biryani Pot",
+     "food": [
+        {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dchfdev5kec3vlddpmwy",
+          "foodname": "Curd Rice",
+          "foodprice": 148
+        },
+          {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tmygtt8zkkqa3ppzxcxg",
+          "foodname": "Paneer Biryani",
+          "foodprice": 239
+        },
+          {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/actpr4mk8kkbc4xxvdlh",
+          "foodname": "Mushroom Biryani",
+          "foodprice": 129
+        }
+
+      ],
+      "type": "North Indian, Biryani",
+      "rating": 3.8,
+      "time": 46,
+      "rate": 500,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 3,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bmwn4n4bn6n1tcpc8x2h",
+      "title": "Kannur Food Point",
+      
+      "food": [
+        {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/n7c50uvdit6vxcy2p37n",
+          "foodname": "Appam",
+          "foodprice": 20,
+          "fooddes": "|1pc|A type of pancake, originating from South India, made with fermented rice batter and coconut milk."
+        },
+          {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/co7vl7milbtbom5j70pc",
+          "foodname": "Veg Noodles",
+          "foodprice": 148,
+          "fooddes": "Serves1,500grms|A deliciously hearty scrumptious stir fried noodles with mixed vegetables."
+        },
+          {
+          "imgfood": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/leza4muz7khmkfsmmuhm",
+          "foodname": "Ghee Rice(Served with Raita)",
+          "foodprice": 130,
+          "fooddes": "|Serves1,500grms|A one pot rice dish made with desi ghee, rice, spices & nut"
+
+
+        }
+
+      ],
+      "type": "Kerala, Chinese",
+      "rating": 4.0,
+      "time": 45,
+      "rate": 300,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 4,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmrvehz7r6mhvz3yialc",
+      "title": "Byg Brewski Brewing Company",
+       "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tzi0unlhtuzjrnwuvyvx",
+          "foodname": "Five Cheese Pizza",
+          "foodprice": 495,
+          "fooddes": "Cream cheese, mozzarella, blue cheese and parmesan."
+        },
+          {
+           "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/z3q0ua0dosclrerzrfwz",
+          "foodname": "Brewski Signature Nachos",
+          "foodprice": 325,
+          "fooddes": "Golden nachos with queso fundido (Mexican style melted cheese) and salsa"
+        },
+          {
+           "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/mpcmynsp2qcbshkrkf0o",
+          "foodname": "Theeka Paneer Tikka (Full Plate)",
+          "foodprice": 315,
+          "fooddes": "The popular paneer tikka with spicy twist"
+        }
+      ],
+      "type": "Pizzas, Biryani",
+      "rating": 4.4,
+      "time": 55,
+      "rate": 850,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 5,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kcpxymjobonszav9zv3d",
+      "title": "Chai Point",
+       "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/hnswonhyvyelsczumkex",
+          "foodname": "Lychee Love",
+          "foodprice": 169,
+          "fooddes": "Fresh Lychee and aloe vera pulp with a hint of rose in iced green tea."
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sdcol7a1a1auc5fspkbe",
+          "foodname": "Kashmiri Kawah Mini Flask ( Serves 4-5)",
+          "foodprice":185,
+          "fooddes": "Whole green tea with cinnamon and cardamom, garnished with almonds and saffron."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dpnq8zbkwe0gzcqueptr",
+          "foodname": "Ayurvedic Chai - Uniflask (Serves 1-2)",
+          "foodprice": 495,
+          "fooddes": "Ayurvedic Chai Uni Flask"
+
+        }
+      ],
+      "type": "Bakery, Combo",
+      "rating": 4.3,
+      "time": 54,
+      "rate": 150,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 6,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kb6xkpi0g7pwlgndztgp",
+      "title": "Chianti",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/esov12uzb9ljzzqmmmta",
+          "foodname": "Mozzarella Di Buffala E Prosciutto",
+          "foodprice": 515,
+          "fooddes": "Thin slices of parma ham with fresh buffalo mozzarella, pesto and balsamic pearls."
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/utgbdlxzf91jzron9zaa",
+          "foodname": "Involtini Di Formaggio Di Capra",
+          "foodprice": 415
+,
+          "fooddes": "Eggplant rolled with goat cheese, rucola, sun-dried tomatoes & sicilian sauce."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/qq1pcp9jjddowon88h20",
+          "foodname": "Mozzarella Fritta",
+          "foodprice": 445,
+          "fooddes": "Fried Mozzarella cheese with balsamic dressing."
+        }
+      ],
+      "type": "Italian, Pizzas",
+      "rating": 4.3,
+      "time": 34,
+      "rate": 1250,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 7,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/uaoxurm8pipynwmya4b8",
+      "title": "Edesia by Freshmenu",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/daptehbavbcr0jlvvj4v",
+          "foodname": "Omelette-Cheese-Whole-Wheat-Sandwich",
+          "foodprice": 149,
+          "fooddes": "Energy 320kcal, Fat 14g, Carbs 21g, Fiber 7g, Protein 19g, Sugar 7g. A humble, fluffy omelette, stuffed between two slices of our signature Marble Bread is a delicious, hearty breakfast."
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/nxhoevyt74bsmvcqb2km",
+          "foodname": "Blueberry Oatmeal Cake",
+          "foodprice": 89,
+          "fooddes": "Energy 439kcal, Fat 21g, Carbs 53g, Fiber 2g, Protein 4g, Sugar 23g. An eggless Canadian blue berry cake enhanced with the goodness of milk soaked oats folded with jaggery and butter and golden baked with homemade cinnamon-blue berry compote. A perfect breakfast treat... can be enjoyed as a dessert with a scoop of ice cream or with hot cocoa."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/otaduntvfeq3nfnerbcx",
+          "foodname": "Dutch Truffle Cake",
+          "foodprice": 99,
+          "fooddes": "Love chocolate? Then this tender, luxurious layer cake is for you. With a ganache glaze and a fabulous filling, the indulgence is so worth it, freshly baked with much love by our chefs in-house!"
+        }
+      ],
+      "type": "Desserts, Bakery",
+      "rating": 3.5,
+      "time": 32,
+      "rate": 150,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 8,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/yj1jb6o94z32vpfc071l",
+      "title": "Magnolia Bakery",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vvmwuidlkznthxhc1wkj",
+          "foodname": "Devil's Food Mocha Cupcake - Pack of Two",
+          "foodprice": 320,
+          "fooddes": "Made with dutch cocoa and topped with chocolate espresso buttercream."
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/rl6pdlokwrjjqulykg3h",
+          "foodname": "Caramel Cupcakes - Pack of Two",
+          "foodprice": 320,
+          "fooddes": "rich and buttery cake made with brown sugar and finished with caramel meringue buttercream."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/mv3sqktv3k8gppjbvvez",
+          "foodname": "Chocolate Cupcake with Chocolate Buttercream - Pack of Two",
+          "foodprice": 280,
+          "fooddes": "A rich, moist cake with a smooth velvety texture and dark chocolate flavor. Iced with chocolate buttercream"
+        }
+      ],
+      "type": "Bakery, Desserts",
+      "rating": 4.5,
+      "time": 47,
+      "rate": 500,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 9,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rbucxndsesk7lgacggtm",
+      "title": "Behrouz Biryani",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/pfnvebtpx7y1rpworl8k",
+          "foodname": "Rose Phirni (Serves 1)",
+          "foodprice": 95,
+          "fooddes": "A slow-cooked Ramadan dessert made from boiling ground aromatic rice in rose-flavoured milk to help you conclude your royal iftaar meal."
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/viy2y20tlntsklp0sfoa",
+          "foodname": "Shahi Paneer Feast (Serves 1)",
+          "foodprice": 565,
+          "fooddes": "[Zaikedaar Paneer (Serves 1) + Beetroot & Peanut Kebab (6 pcs) + Phirni (1 pc)] Break your fast with an exquisite meal of soft, crumbly & fresh Paneer biryani alongside delicious Gosht Haleem and sweet, refreshing Phirni."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/m3sinaa19uz3ei4trjbp",
+          "foodname": "Moong Dal Halwa (Serves 1)",
+          "foodprice": 95,
+          "fooddes": "An irresistable sweet dish made from moong lentils that is sure to entice you with its melt-in-the-mouth texture, unique aroma and taste."
+        }
+      ],
+      "type": "Biryani, Mughlai",
+      "rating": 4.3,
+      "time": 54,
+      "rate": 500,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 10,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zy6ijljhez4zm3awz1ea",
+      "title": "Burger King",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/mear88dkhxto3cpnetxi",
+          "foodname": "Crispy Veg + Medium Fries + Classic Cold Coffee",
+          "foodprice": 339,
+          "fooddes": "Crispy Veg + Medium Fries + Classic Cold Coffee"
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i5nsaca5ub9ve5dzkj7e",
+          "foodname": "Strategic Timeout Combo (Chicken)",
+          "foodprice": 723,
+          "fooddes": "1 Classic Chicken + 2 Crispy Chicken Double Patty + 1 King Fries + 1Chicken Fries + 2 Pepsi (M)"
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/pohyxhppuvjo5plgdvlz",
+          "foodname": "2 Crispy Veg Double Patty + 1King Fries + 1Veggie strips",
+          "foodprice": 308,
+          "fooddes": "2 Crispy Veg Double Patty + 1King Fries + 1Veggie strips"
+        }
+      ],
+      "type": "American, Fast Food",
+      "rating": 4.2,
+      "time": 40,
+      "rate": 350,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 11,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wya5kg7wxvbh5opfpo1m",
+      "title": "Namaste",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ixlexdhrxpu2ir9cc6xr",
+          "foodname": "Idli (2pc)",
+          "foodprice": 31,
+          "fooddes": "Served with sambar and chutney. No soda, artificial colour or any other chemical used in the preparation."
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/cbe9uzs3piatzjber10a",
+          "foodname": "Onion Dosa",
+          "foodprice": 63,
+          "fooddes": "Served with saagu and chutney. No soda, artificial colour or any other chemical used in the preparation."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ucmcedcpzv2nfpylxbg7",
+          "foodname": "Kesari Bath",
+          "foodprice": 70,
+          "fooddes": "No soda, artificial colour or any other chemical used in the preparation. (Serves 1)"
+        }
+      ],
+      "type": "South Indian, Thalis",
+      "rating": 4.2,
+      "time": 37,
+      "rate": 100,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 12,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qh5kiglsvwhoukabvvqx",
+      "title": "Anand Sweets and Savouries",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/uxd5hddjvsudnrfhc2ul",
+          "foodname": "Motichoor Laddu 250 Gram",
+          "foodprice": 152.38,
+          "fooddes": "Rated as one of the best Laddus in India, we at Anand Sweets are proud and protective of this our Laddus. Made using the finest ingredients of pure desi ghee, coarse chickpea flour and nuts, our Laddus have been a part the celebrations for thousands of ou"
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vidoj383uio5cyjmss8f",
+          "foodname": "Mysore Pak - 250 Grams",
+          "foodprice": 180.95,
+          "fooddes": "The pride of Karnataka, a land we owe it all to ! Melt in your mouth, this soft textured delicacy is made with a generous amount of desi ghee, sugar, gram flour, and hints of cardamom. This one if for the Royalty"
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/leti0sdartuy5p7z666y",
+          "foodname": "Doodh peda (250Gram)",
+          "foodprice": 152.38,
+          "fooddes": "The all-auspicious milk peda is crafted with the freshest khoya and delectable condensed milk to be the perfect testament of indulgence."
+        }
+      ],
+      "type": "Sweets, Snacks",
+      "rating": 4.5,
+      "time": 32,
+      "rate": 300,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 13,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kdsuejejkfy9xuyucj7n",
+      "title": "KFC",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zplov25cvr3t6fe95e7b",
+          "foodname": "Biryani combo - for 2",
+          "foodprice": 795.24,
+          "fooddes": "Weekends are for Biryani! Enjoy this new combo of 2 Popcorn Biryani Buckets served with 2 Spicy Gravies, 2pc Hot & Crispy, Medium Fries & a Pepsi PET -at a deal price"
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/carucr0mu2sl9voao9i4",
+          "foodname": "Zinger & Chicken Combo -for 2",
+          "foodprice": 524.76,
+          "fooddes": "Weekend mood set with Chicken Zinger, Medium Popcorn, 4 Hot Wings & a chilled Pepsi - at a deal price"
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/aciowiholb3tmaowcu7h",
+          "foodname": "Super 4s Bucket",
+          "foodprice": 579.05,
+          "fooddes": "Flat Rs. 107 off on combo of 4 Hot & Crispy Chicken & 4 Strips [serves 2]"
+        }
+      ],
+      "type": "American, Snacks",
+      "rating": 3.9,
+      "time": 35,
+      "rate": 400,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 14,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/i53hrycmcn2oehrojag0",
+      "title": "Sri Punjabi Dhaba",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/oyjhj2bsfhjsw8x5tpgv",
+          "foodname": "Egg Masala Thali +lassi",
+          "foodprice": 112,
+          "fooddes": "1nos eggmsala+dalfry+ 4roti+1/2 rice"
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/rmwjptn8gvyr76bmrqn8",
+          "foodname": "Malai Kofta",
+          "foodprice": 62,
+          "fooddes": "Serves 1 || Not-Spicy || Serves Gravy ."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/agiwxqryylq3ibiwx9ty",
+          "foodname": "Gobi Manchurian Dry",
+          "foodprice": 60,
+          "fooddes": " 10 Pc || Medium Spicy || Serves Dry || Serves Bone || Fried ."
+        }
+      ],
+      "type": "North Indian, Biryani",
+      "rating":3.0,
+      "time": 36,
+      "rate": 300,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 15,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vaztnu7dffyzzcd9fka6",
+      "title": "Corner House Ice Cream",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yxh4l0jdiwgyeu4opvmh",
+          "foodname": "Black Forest Cake With Ice Cream And Chocolate Sauce",
+          "foodprice": 175,
+          "fooddes": "A classic Black Forest pastry, served with vanilla ice cream and topped with hot chocolate sauce"
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ujz5qfwrctlgbgrwzj9j",
+          "foodname": "Almond Fudge",
+          "foodprice": 200,
+          "fooddes": "Three scoops of vanilla ice cream topped with hot chocolate sauce and roasted almonds"
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/u0vimnhtqmrmhjytvjo5",
+          "foodname": "Royal Butterscotch",
+          "foodprice": 200,
+          "fooddes": "Two scoops butterscotch ice cream topped with cream, butterscotch sauce and roasted almonds"
+        }
+      ],
+      "type": "Ice Cream, Desserts",
+      "rating": 4.6,
+      "time": 30,
+      "rate": 250,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 16,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/hdxubjlhetjvfysk09id",
+      "title": "Nandhini Deluxe",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/j6iio50oxlli3jqj4be1",
+          "foodname": "Carrot 65",
+          "foodprice":229,
+          "fooddes": "Authentic Preparation of Nandini Must Try Item"
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/y28bc4dyknbscpppzsgb",
+          "foodname": "Paneer Butter Masala",
+          "foodprice": 269,
+          "fooddes": "A creamy indulgence of soft paneer cubes cooked in tomato and onion based gravy with undertones of whole spices."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/m0w0ll1z1kmymyz5dsdt",
+          "foodname": "Murgh Tikka",
+          "foodprice": 299,
+          "fooddes": "Tender Succulent Chicken Breast Pieces Marinated With Spicy Masala Finished with Clay Oven"
+        }
+      ],
+      "type": "Andhra, Biryani",
+      "rating": 4.0,
+      "time": 39,
+      "rate": 500,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 17,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/o8t0w5gdlujpigauaflw",
+      "title": "Lo! - Low Carb and Keto Foods",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/qdgtmwovwv5ggnsm5smt",
+          "foodname": "[ Keto Roll ] Paneer Kathi",
+          "foodprice": 249,
+          "fooddes": "Now introducing our keto-friendly and delicious paneer Kathi roll which is high in protein minus the carbs. Protein: 32.8g, Net Carbs: 14.7g, Fats: 27.3g May contain Soy, Gluten, Groundnuts, and other nuts."
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/jkrp1jtespgrk8gymtij",
+          "foodname": "Keto Cheese Omelette",
+          "foodprice": 149,
+          "fooddes": "Say cheese to our freshly prepared fluffy omelette to kickstart your day with good health and ketosis. Made using two eggs. Protein: 14.9g, Net Carbs: 2.9g, Fats:19.9g May contain Soy, Gluten, Groundnuts and other nuts."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/j5owbkqaukmbfeqaqnnw",
+          "foodname": "Low Carb Paratha (1 Piece) - Healthy",
+          "foodprice": 49,
+          "fooddes": "This yummy Indian flatbread is super healthy and super tasty! made from our low carb atta. Protein: 11.7g, Net Carbs: 4.6g, Fats: 9.6g May contain Soy, Gluten, Groundnuts and other nuts."
+        }
+      ],
+      "type": "Healthy Food, Keto",
+      "rating": 4.5,
+      "time": 33,
+      "rate": 150,
+      "coupon": "50% off | Use WELCOME50"
+    },
+    {
+      "id": 18,
+      "img": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdbqezwhwfrsetjjyoa2",
+      "title": "Chinese Wok (Wok Express)",
+        "food": [
+        {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sshcj3uj4d4zm0g07thb",
+          "foodname": "Veg Spring Roll - 6 Pieces (Mini)",
+          "foodprice": 209,
+          "fooddes": "Mixed vegetables & noodles encased in crispy spring roll sheet served with sweet chilli sauce."
+        },
+             {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ctpjdap1d284crbnunun",
+          "foodname": "Chilli Paneer Dry",
+          "foodprice": 274,
+          "fooddes": "Paneer cubes, green chillies, onion, capsicum tossed in desi chilli sauce finished with a punch of soya."
+        },
+            {
+          "imgfood" : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/cyvqdhmgeuapscloyuxd",
+          "foodname": "Chicken Manchow Soup",
+          "foodprice": 159,
+          "fooddes": "A local favourite with chicken and egg topped with crunchy fried noodles."
+        }
+      ],
+      "type": "Chinese, Asian",
+      "rating": 3.8,
+      "time": 28,
+      "rate": 250,
+      "coupon": "50% off | Use WELCOME50"
+    }
+  ]
+}

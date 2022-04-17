@@ -1,0 +1,19 @@
+.carousel-img{
+display: flex;
+background-color: #171a29;
+
+}
+
+.carousel-img .content-img{
+display: flex;
+width: 80%;
+margin: auto !important;
+padding : 35px 0px !important;
+}
+.carousel-img img{
+width: 270px;
+    transition: transform .5s cubic-bezier(0.22, 0.61, 0.36, 1);   
+     backface-visibility: visible;
+    transform: translateZ(0);
+    margin : 0px 66px 0px 0px !important;
+}

@@ -1,33 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../Style/RestraurantsDetails.css";
-
+import { useDispatch, useSelector } from "react-redux";
+import { getData } from "../Redux/action";
+import Checkout from "./Checkout";
 import Navbar from "./Navbar";
-const axios = require("axios");
 
 const RestaurantDetails = () => {
-  const [value, setValue] = useState([]);
   const { id } = useParams();
-  const [cart, setCart] = useState([]);
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/data")
-      .then((res) => {
-        res = res.data;
-        setValue(res);
-      })
-      .catch((err) => console.log(err));
+    dispatch(getData);
   }, []);
+  const apiData = useSelector((state) => state.data);
 
   return (
     <div>
       <Navbar />
-      {value
-        .filter((e) => e.id == `${id}`)
-        .map((el, i) => {
-          return (
-            <div key={i}>
-              <div className="details">
+      <div className="details">
+        {apiData
+          .filter((e) => e.id == `${id}`)
+          .map((el, i) => {
+            return (
+              <div key={i}>
                 <div className="container-x">
                   <div className="img">
                     <img src={el.img} alt="" />
@@ -49,43 +46,48 @@ const RestaurantDetails = () => {
                     </div>
                   </div>
                 </div>
-
-                {el.food.map((ele, i) => {
-                  return (
-                    <div>
-                      <div className="food">
-                        <div className="content-food">
-                          <div className="container-food">
-                            <div className="left-x">
-                              <h3>{ele.foodname}</h3>
-                              <h5>₹{ele.foodprice}</h5>
-                              <p>{ele.fooddes}</p>
-                            </div>
-                            <div className="right-y">
-                              <img src={ele.imgfood} alt="" />
-                              <button>Add</button>
+                {/* Food Data */}
+                <div className="both-content">
+                  <div className="flex-item">
+                    {el.food.map((ele, i) => {
+                      return (
+                        <div key={i}>
+                          <div className="food">
+                            <div className="content-food">
+                              <div className="container-food">
+                                <div className="left-x">
+                                  <h3>{ele.foodname}</h3>
+                                  <h5>₹{ele.foodprice}</h5>
+                                  <p>{ele.fooddes}</p>
+                                </div>
+                                <div className="right-y">
+                                  <img src={ele.imgfood} alt="" />
+                                  <button>Add</button>
+                                </div>
+                              </div>
+                              <hr />
                             </div>
                           </div>
-                          <hr />
                         </div>
-                      </div>
-                    </div>
-                  );
-                })}
+                      );
+                    })}
+                  </div>
+                  <div className="cart">
+                    <Checkout />
+                    <h1>Cart Empty</h1>
+                    <img
+                      src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_480/Cart_empty_-_menu_2x_ejjkf2"
+                      alt=""
+                    />
+                    <p>
+                      Good food is always cooking! Go ahead, order some yummy
+                      items from the menu.
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      <div className="cart">
-        <h1>Cart Empty</h1>
-        <img
-          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_480/Cart_empty_-_menu_2x_ejjkf2"
-          alt=""
-        />
-        <p>
-          Good food is always cooking! Go ahead, order some yummy items from the
-          menu.
-        </p>
+            );
+          })}
       </div>
     </div>
   );

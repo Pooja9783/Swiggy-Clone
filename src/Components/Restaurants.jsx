@@ -1,55 +1,51 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../Style/Restaurants.css";
-const axios = require("axios");
-
+import { useDispatch, useSelector } from "react-redux";
+import { getData } from "../Redux/action";
 const Restaurants = () => {
-  const [value, setValue] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/data")
-      .then((res) => {
-        // console.log(res.data);
-        setValue(res.data);
-      })
-      .catch((err) => console.log(err));
+    dispatch(getData);
   }, []);
 
-  const ln = value.length;
+  const apiData = useSelector((state) => state.data);
+
+  const ln = apiData.length;
 
   // ~~~~~~~~~~~~~~~Rating~~~~~~~~~~~~~
   const rating = (e) => {
     if (e === "r") {
-      let res = value.sort((a, b) => {
+      let res = apiData.sort((a, b) => {
         return b.rating - a.rating;
       });
-      console.log(res);
-      setValue([...res]);
+      // console.log(res);
+      dispatch([...res]);
     }
   };
   //~~~~~~~~~~~~~~~~~~High to Low~~~~~~~~~~~~~~~
   const hTol = (m) => {
     if (m === "h") {
-      let res = value.sort((a, b) => {
+      let res = apiData.sort((a, b) => {
         return b.rate - a.rate;
       });
-      setValue([...res]);
+      dispatch([...res]);
     } else if (m === "l") {
-      let res = value.sort((a, b) => {
+      let res = apiData.sort((a, b) => {
         return a.rate - b.rate;
       });
-      setValue([...res]);
+      dispatch([...res]);
     }
   };
 
   //~~~~~~~~~~~~~~~~~~Delivery Time~~~~~~~~~~~~~~~
   const deliveryTime = (t) => {
     if (t === "t") {
-      let res = value.sort((a, b) => {
+      let res = apiData.sort((a, b) => {
         return a.time - b.time;
       });
-      setValue([...res]);
+      dispatch([...res]);
     }
   };
   return (
@@ -71,7 +67,7 @@ const Restaurants = () => {
         <hr />
         <div className="data">
           <div className="display-data">
-            {value.map((ele, i) => {
+            {apiData.map((ele, i) => {
               return (
                 <div key={i} className="card-card">
                   <Link to={`/restaurantdetails/${ele.id}`}>

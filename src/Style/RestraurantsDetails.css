@@ -35,15 +35,21 @@
 }
 
 /* ~~~~~~~~~~food~~~~~~~~~~~~~~~~ */
+.both-content {
+    display: flex;
+    justify-content: space-between;
+        /* background: red; */
+        width: 80%;
+        margin: auto !important;
+}
+.flex-item{
+}
 .food {
-  /* background : red; */
-  width: 80%;
   margin: auto !important;
   color: #282c3f;
 }
 .food .content-food {
-  width: 55%;
-  /* background : blue; */
+  width: 45%;
   margin: auto !important;
   padding: 20px !important;
 }
@@ -51,7 +57,6 @@
   display: flex;
 }
 .food .left-x {
-  /* background: red; */
   width: 90%;
   padding: 0px 80px 0px 0px !important;
 }
@@ -59,7 +64,7 @@
   /* background : blue; */
   width: 300px;
   width: 10%;
-  padding: 0px 80px 0px 0px !important;
+  padding: 0px 10px 0px 0px !important;
 }
 .food .right-y img {
   width: 140px;
@@ -82,4 +87,19 @@
 }
 .food hr {
   margin-top: 20px !important;
+}
+
+/* ~~~~~~~~~~~Cart~~~~~~~~~~~~~~~ */
+.cart{
+  color:#171a29;
+  width : 28%;
+}
+.cart img{
+  width : 200px;
+}
+.cart h1 {
+  font-size: 39px;
+}
+.cart p{
+  font-size: 18px;
 }

@@ -10,7 +10,7 @@ const Restaurants = () => {
     dispatch(getData);
   }, []);
 
-  const apiData = useSelector((state) => state.data);
+  const apiData = useSelector((state) => state.dataReducer.data);
 
   const ln = apiData.length;
 

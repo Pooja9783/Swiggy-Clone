@@ -1,7 +1,10 @@
 import React from "react";
 import "../Style/Navbar.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const getCart = useSelector((state) => state.dataReducer.cart);
+  // console.log(getCart.length);
   return (
     <div className="navbar-a">
       <div className="container-nav">
@@ -32,9 +35,11 @@ const Navbar = () => {
               <i className="bi bi-person"></i>Sign In
             </Link>
           </p>
-          <p>
-            <i className="bi bi-bag"></i>Cart
-          </p>
+          <Link to="/">
+            <p>
+              <i className="bi bi-bag">{getCart.length}</i>Cart
+            </p>
+          </Link>
         </div>
       </div>
     </div>

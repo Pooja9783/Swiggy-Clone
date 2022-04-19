@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../Style/RestraurantsDetails.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getData } from "../Redux/action";
-import Checkout from "./Checkout";
+import { getData, addToCart } from "../Redux/action";
+import Cart from "./Cart";
 import Navbar from "./Navbar";
 
 const RestaurantDetails = () => {
   const { id } = useParams();
-
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getData);
   }, []);
-  const apiData = useSelector((state) => state.data);
+  const apiData = useSelector((state) => state.dataReducer.data);
+  const getCart = useSelector((state) => state.dataReducer.cart);
+  // console.log(getCart);
+
+  const handleAddTOCart = (e) => {
+    dispatch(addToCart(e));
+  };
 
   return (
     <div>
@@ -62,7 +67,9 @@ const RestaurantDetails = () => {
                                 </div>
                                 <div className="right-y">
                                   <img src={ele.imgfood} alt="" />
-                                  <button>Add</button>
+                                  <button onClick={() => handleAddTOCart(ele)}>
+                                    Add
+                                  </button>
                                 </div>
                               </div>
                               <hr />
@@ -73,16 +80,21 @@ const RestaurantDetails = () => {
                     })}
                   </div>
                   <div className="cart">
-                    <Checkout />
-                    <h1>Cart Empty</h1>
-                    <img
-                      src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_480/Cart_empty_-_menu_2x_ejjkf2"
-                      alt=""
-                    />
-                    <p>
-                      Good food is always cooking! Go ahead, order some yummy
-                      items from the menu.
-                    </p>
+                    {getCart.length ? (
+                      <Cart />
+                    ) : (
+                      <div>
+                        <h1>Cart Empty</h1>
+                        <img
+                          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_480/Cart_empty_-_menu_2x_ejjkf2"
+                          alt=""
+                        />
+                        <p>
+                          Good food is always cooking! Go ahead, order some
+                          yummy items from the menu.
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

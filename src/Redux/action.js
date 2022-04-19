@@ -1,9 +1,14 @@
-import { DATA_SUCCESS } from "./actionType";
+import { DATA_SUCCESS, ADD_TO_CART } from "./actionType";
 const axios = require("axios");
 
 export const dataSucess = (payload) => ({
   type: DATA_SUCCESS,
   payload: payload,
+});
+
+export const addToCart = (data) => ({
+  type: ADD_TO_CART,
+  payload: data,
 });
 
 export const getData = (dispatch) => {

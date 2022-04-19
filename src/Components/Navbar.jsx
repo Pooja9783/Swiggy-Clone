@@ -9,10 +9,12 @@ const Navbar = () => {
     <div className="navbar-a">
       <div className="container-nav">
         <div className="left">
-          <img
-            src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
-            alt="img"
-          />
+          <Link to="/">
+            <img
+              src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
+              alt="img"
+            />
+          </Link>
           <p>
             Location<i className="bi bi-caret-down"></i>
           </p>
@@ -35,7 +37,7 @@ const Navbar = () => {
               <i className="bi bi-person"></i>Sign In
             </Link>
           </p>
-          <Link to="/">
+          <Link to="/checkout">
             <p>
               <i className="bi bi-bag">{getCart.length}</i>Cart
             </p>

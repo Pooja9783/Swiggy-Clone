@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 const Cart = () => {
   const getCart = useSelector((state) => state.dataReducer.cart);
-  //   console.log(getCart.length);
+  const getId = getCart.map((l) => {
+    return l.id;
+  });
+
+  const [price, setPrice] = useState(0);
+  const total = () => {
+    let price = 0;
+    getCart.map((ele) => {
+      price += ele.foodprice;
+    });
+    setPrice(price);
+  };
+
+  useEffect(() => {
+    total();
+  }, [total]);
+  console.log(price);
   return (
     <div>
       <h1>Cart</h1>
@@ -12,13 +28,21 @@ const Cart = () => {
           return (
             <div className="cart-item" key={i}>
               <p>{e.foodname}</p>
-              <p>₹{e.foodprice}</p>
-              <Link to={`/checkout/${e.id}`}>
-                <button>Checkout</button>
-              </Link>
+              <b>₹{e.foodprice}</b>
+              <div style={{ background: "red", width: "100px" }}>
+                <span>-</span>
+                <span>{e.quantity}</span>
+                <span>+</span>
+              </div>
             </div>
           );
         })}
+
+        <h3>Subtotal:</h3>
+        <p>{price}</p>
+        <Link to={`/checkout`}>
+          <button>Checkout</button>
+        </Link>
       </div>
     </div>
   );

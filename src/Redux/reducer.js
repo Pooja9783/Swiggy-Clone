@@ -11,7 +11,15 @@ export const dataReducer = (state = initData, action) => {
       return { ...state, data: [...action.payload] };
 
     case ADD_TO_CART:
-      return { ...state, cart: [...state.cart, action.payload] };
+      const itemIndex = state.cart.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      if (itemIndex >= 0) {
+        state.cart[itemIndex].quantity += 1;
+      } else {
+        const temp = { ...action.payload, quantity: 1 };
+        return { ...state, cart: [...state.cart, temp] };
+      }
 
     default:
       return state;

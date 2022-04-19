@@ -13,12 +13,12 @@ const Cart = () => {
             <div className="cart-item" key={i}>
               <p>{e.foodname}</p>
               <p>₹{e.foodprice}</p>
+              <Link to={`/checkout/${e.id}`}>
+                <button>Checkout</button>
+              </Link>
             </div>
           );
         })}
-        <Link to="/checkout">
-          <button>Checkout</button>
-        </Link>
       </div>
     </div>
   );

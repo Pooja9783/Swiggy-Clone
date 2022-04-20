@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     background: "white",
     padding: "10px",
+    color: "red",
   },
   logo: {
     width: "55px",
@@ -36,36 +37,38 @@ const Navbar = () => {
                 alt="img"
               />
             </Link>
+            <p>
+              Location<i className="bi bi-caret-down"></i>
+            </p>
+            <div className="right">
+              <Link to="/search">
+                <p>
+                  <i className="bi bi-search"></i>search
+                </p>
+              </Link>
+              <p>
+                {" "}
+                <i className="bi bi-percent">Offers</i>
+              </p>
+              <p>
+                <i className="bi bi-plus-circle-dotted"></i>Help
+              </p>
+
+              <p>
+                <Link to="/login">
+                  {" "}
+                  <i className="bi bi-person"></i>Sign In
+                </Link>
+              </p>
+              <Link to="/checkout">
+                <p>
+                  <i className="bi bi-bag">{getCart.length}</i>Cart
+                </p>
+              </Link>
+            </div>
           </Typography>
         </Toolbar>
       </AppBar>
-      <p>
-        Location<i className="bi bi-caret-down"></i>
-      </p>
-      <div className="right">
-        <p>
-          <i className="bi bi-search"></i>search
-        </p>
-        <p>
-          {" "}
-          <i className="bi bi-percent">Offers</i>
-        </p>
-        <p>
-          <i className="bi bi-plus-circle-dotted"></i>Help
-        </p>
-
-        <p>
-          <Link to="/login">
-            {" "}
-            <i className="bi bi-person"></i>Sign In
-          </Link>
-        </p>
-        <Link to="/checkout">
-          <p>
-            <i className="bi bi-bag">{getCart.length}</i>Cart
-          </p>
-        </Link>
-      </div>
     </div>
   );
 };

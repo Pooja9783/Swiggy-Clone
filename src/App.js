@@ -4,6 +4,7 @@ import Home from "./Components/Home";
 import RestaurantDetails from "./Components/RestaurantDetails";
 import Login from "./Components/Login";
 import Checkout from "./Components/Checkout";
+import Search from "./Components/Search";
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
         <Route path="/restaurantdetails/:id" element={<RestaurantDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </div>
   );

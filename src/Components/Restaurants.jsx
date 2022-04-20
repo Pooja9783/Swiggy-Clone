@@ -16,7 +16,7 @@ const Restaurants = () => {
 
   // ~~~~~~~~~~~~~~~Relevance~~~~~~~~~~~~
 
-  const relevance = () => {};
+  // const relevance = () => {};
 
   // ~~~~~~~~~~~~~~~Rating~~~~~~~~~~~~~
   const rating = (e) => {
@@ -60,7 +60,7 @@ const Restaurants = () => {
             <h2>{ln} restaurants</h2>
           </div>
           <div className="right-content">
-            <p onClick={relevance}>Relevance</p>
+            <p>Relevance</p>
             <p onClick={() => deliveryTime("t")}>Delivery Time</p>
             <p onClick={() => rating("r")}>Rating</p>
             <p onClick={() => hTol("l")}>Cost: Low To High</p>

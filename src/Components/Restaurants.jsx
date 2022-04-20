@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../Style/Restaurants.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/action";
 const Restaurants = () => {
+  const [value, setValue] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -11,8 +12,11 @@ const Restaurants = () => {
   }, []);
 
   const apiData = useSelector((state) => state.dataReducer.data);
-
   const ln = apiData.length;
+
+  // ~~~~~~~~~~~~~~~Relevance~~~~~~~~~~~~
+
+  const relevance = () => {};
 
   // ~~~~~~~~~~~~~~~Rating~~~~~~~~~~~~~
   const rating = (e) => {
@@ -21,7 +25,7 @@ const Restaurants = () => {
         return b.rating - a.rating;
       });
       // console.log(res);
-      dispatch([...res]);
+      setValue([...res]);
     }
   };
   //~~~~~~~~~~~~~~~~~~High to Low~~~~~~~~~~~~~~~
@@ -30,12 +34,12 @@ const Restaurants = () => {
       let res = apiData.sort((a, b) => {
         return b.rate - a.rate;
       });
-      dispatch([...res]);
+      setValue([...res]);
     } else if (m === "l") {
       let res = apiData.sort((a, b) => {
         return a.rate - b.rate;
       });
-      dispatch([...res]);
+      setValue([...res]);
     }
   };
 
@@ -45,7 +49,7 @@ const Restaurants = () => {
       let res = apiData.sort((a, b) => {
         return a.time - b.time;
       });
-      dispatch([...res]);
+      setValue([...res]);
     }
   };
   return (
@@ -56,7 +60,7 @@ const Restaurants = () => {
             <h2>{ln} restaurants</h2>
           </div>
           <div className="right-content">
-            <p>Relevance</p>
+            <p onClick={relevance}>Relevance</p>
             <p onClick={() => deliveryTime("t")}>Delivery Time</p>
             <p onClick={() => rating("r")}>Rating</p>
             <p onClick={() => hTol("l")}>Cost: Low To High</p>

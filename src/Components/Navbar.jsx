@@ -1,72 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Style/Navbar.css";
+import { DrawerComp } from "./Drawer";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { AppBar, Typography, Toolbar } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
 
-  navbar: {
-    width: "80%",
-    background: "white",
-    padding: "10px",
-    color: "red",
-  },
-  logo: {
-    width: "55px",
-  },
-}));
-
+import {
+  Grid,
+  AppBar,
+  Toolbar,
+  Typography,
+  Tabs,
+  Tab,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core";
 const Navbar = () => {
+  const [val, setVal] = useState();
+  const theme = useTheme();
   const getCart = useSelector((state) => state.dataReducer.cart);
-  // console.log(getCart.length);
-  const classes = useStyles();
+
+  const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
+  // console.log(isMatch);
+  // console.log(theme);
 
   return (
-    <div className={classes.navbarX}>
-      <AppBar className={classes.navbar}>
+    <div className="Navbar">
+      <AppBar style={{ background: "white" }} position="static">
         <Toolbar>
-          <Typography>
-            <Link to="/">
-              <img
-                className={classes.logo}
-                src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
-                alt="img"
-              />
-            </Link>
-            <p>
-              Location<i className="bi bi-caret-down"></i>
-            </p>
-            <div className="right">
-              <Link to="/search">
-                <p>
-                  <i className="bi bi-search"></i>search
-                </p>
-              </Link>
-              <p>
-                {" "}
-                <i className="bi bi-percent">Offers</i>
-              </p>
-              <p>
-                <i className="bi bi-plus-circle-dotted"></i>Help
-              </p>
+          {isMatch ? (
+            <>
+              <Typography>
+                <img
+                  src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
+                  alt="img"
+                  style={{ width: "60px" }}
+                />
+              </Typography>
 
-              <p>
-                <Link to="/login">
-                  {" "}
-                  <i className="bi bi-person"></i>Sign In
-                </Link>
-              </p>
-              <Link to="/checkout">
-                <p>
-                  <i className="bi bi-bag">{getCart.length}</i>Cart
-                </p>
-              </Link>
-            </div>
-          </Typography>
+              <DrawerComp />
+            </>
+          ) : (
+            <Grid sx={{ placeItems: "center" }} container>
+              <Typography style={{ marginLeft: "100px", display: "flex" }}>
+                <img
+                  className="logo"
+                  src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
+                  alt="img"
+                  style={{ width: "50px" }}
+                />
+                <h5 className="nav-h5">Location</h5>
+              </Typography>
+              <Grid item xs={2}></Grid>
+              <Grid item xs={4}>
+                <div className="right-nav">
+                  <Link to="/search">
+                    <p>
+                      <i className="bi bi-search"></i>search
+                    </p>
+                  </Link>
+                  <p>
+                    {" "}
+                    <i className="bi bi-tropical-storm">Offers</i>
+                  </p>
+                  <p>
+                    <i className="bi bi-plus-circle-dotted"></i>Help
+                  </p>
+
+                  <Link to="/login">
+                    <p>
+                      {" "}
+                      <i className="bi bi-person"></i>Sign In
+                    </p>
+                  </Link>
+                  <Link to="/checkout">
+                    <p>
+                      <i className="bi bi-bag">{getCart.length}</i>Cart
+                    </p>
+                  </Link>
+                </div>
+              </Grid>
+            </Grid>
+          )}
         </Toolbar>
       </AppBar>
     </div>

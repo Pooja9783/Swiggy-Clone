@@ -25,7 +25,7 @@ const RestaurantDetails = () => {
   return (
     <div>
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <div>
           <div className="details">
             {apiData

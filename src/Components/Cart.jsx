@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-const Cart = () => {
-  const getCart = useSelector((state) => state.dataReducer.cart);
-  const getId = getCart.map((l) => {
-    return l.id;
-  });
+import { addToCart, removeData } from "../Redux/action";
 
+const Cart = () => {
+  const dispatch = useDispatch();
+
+  const getCart = useSelector((state) => state.dataReducer.cart);
   const [price, setPrice] = useState(0);
   const total = () => {
     let price = 0;
@@ -19,7 +19,14 @@ const Cart = () => {
   useEffect(() => {
     total();
   }, [total]);
-  console.log(price);
+  // console.log(price);
+  const handleAddTOCart = (e) => {
+    dispatch(addToCart(e));
+  };
+  const removeItem = (e) => {
+    dispatch(removeData(e));
+  };
+
   return (
     <div>
       <h1>Cart</h1>
@@ -29,10 +36,27 @@ const Cart = () => {
             <div className="cart-item" key={i}>
               <p>{e.foodname}</p>
               <b>₹{e.foodprice}</b>
-              <div style={{ background: "red", width: "100px" }}>
-                <span>-</span>
-                <span>{e.quantity}</span>
-                <span>+</span>
+              <div
+                style={{
+                  background: "gray",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  cursor: "pointer",
+                }}
+              >
+                <span
+                  style={{ fontSize: "18px" }}
+                  onClick={() => removeItem(e)}
+                >
+                  -
+                </span>
+                <span style={{ fontSize: "18px" }}>{e.quantity}</span>
+                <span
+                  style={{ fontSize: "18px" }}
+                  onClick={() => handleAddTOCart(e)}
+                >
+                  +
+                </span>
               </div>
             </div>
           );

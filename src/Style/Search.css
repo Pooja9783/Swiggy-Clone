@@ -1,0 +1,98 @@
+.search-x{
+width: 100%;
+margin: auto;
+}
+
+.search-y input{
+    width : 100%;
+    height : 50px;
+    margin: 50px 80px;
+    outline: none;
+    
+}
+
+ .data {
+      width: 84%;
+margin: 50px 350px;
+}
+
+ .display-data {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+}
+
+ .card-card {
+    margin: 20px auto !important;
+    height: 340px;
+    border: 1px solid white;
+    padding: 20px !important;
+}
+
+ .card-card:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+}
+.input {
+    display: flex;
+    margin : auto !important;
+}
+.input a{
+       margin-top: 70px;
+}
+
+ img {
+    width: 275px;
+}
+
+ .all-data {
+    margin: 5px 0px !important;
+    /* background: rosybrown; */
+}
+
+ .all-data .text h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+ .all-data .text p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0px !important;
+}
+
+ .flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto !important;
+}
+
+ .rating {
+    background: rgb(53, 196, 124);
+    width: 40px;
+    color: white;
+    font-weight: 600 !important;
+}
+
+ .flex p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: #282c3f;
+}
+
+a:hover {
+    color: #282c3f;
+}
+
+ hr {
+    margin: 18px auto !important;
+    width: 100%;
+}
+
+ .coupon {
+    color: #8a584b;
+    font-weight: 400;
+}

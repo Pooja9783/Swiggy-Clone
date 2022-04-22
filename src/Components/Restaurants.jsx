@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/action";
 const Restaurants = () => {
   const [value, setValue] = useState([]);
+  const [da, setDa] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -12,6 +13,12 @@ const Restaurants = () => {
   }, []);
 
   const apiData = useSelector((state) => state.dataReducer.data);
+
+  useEffect(() => {
+    setDa(apiData);
+  }, []);
+
+  console.log(da);
   const ln = apiData.length;
 
   // ~~~~~~~~~~~~~~~Relevance~~~~~~~~~~~~

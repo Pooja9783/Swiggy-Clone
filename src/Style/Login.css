@@ -1,0 +1,48 @@
+.login-x {
+  width: 80%;
+  margin: 0px auto;
+  /* background: red; */
+}
+.login {
+ 
+  margin-left: 400px;
+}
+.login i {
+  color: #fc8019;
+}
+.login-input {
+  /* background: red; */
+  margin: auto;
+  width: 100%;
+}
+.login input {
+  width: 70%;
+  height: 50px;
+  margin: 10px 0px;
+  outline: none;
+}
+.login button {
+  width: 70%;
+  height: 40px;
+  border: 1px solid #fc8019;
+  color: #fff;
+  background-color: #fc8019;
+}
+.login p {
+  width: 50%;
+  margin: 10px 0px;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 900px) {
+    .login {
+        margin-left: 100px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+.login {
+    margin-left: 100px;
+}
+}

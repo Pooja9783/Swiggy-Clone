@@ -1,4 +1,4 @@
-import { DATA_SUCCESS, ADD_TO_CART } from "./actionType";
+import { DATA_SUCCESS, ADD_TO_CART, RMV_DATA } from "./actionType";
 const axios = require("axios");
 
 export const dataSucess = (payload) => ({
@@ -11,9 +11,16 @@ export const addToCart = (data) => ({
   payload: data,
 });
 
+export const removeData = (item) => {
+  return {
+    type: RMV_DATA,
+    payload: item,
+  };
+};
+let url = "http://localhost:5000/data";
 export const getData = (dispatch) => {
   axios
-    .get("http://localhost:5000/data")
+    .get(url)
     .then((res) => {
       // console.log(res.data);
       dispatch(dataSucess(res.data));

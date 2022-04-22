@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import { login, useAuth } from "../firebase/firebase";
+import Navbar from "./Navbar";
+import "../Style/Login.css";
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const currentUser = useAuth();
@@ -10,7 +12,6 @@ const Login = () => {
 
   async function loginButton() {
     setLoading(true);
-
     try {
       await login(emailRef.current.value, passwordRef.current.value);
     } catch {
@@ -20,19 +21,39 @@ const Login = () => {
   }
   return (
     <div>
-      <div className="mo">
-        <input ref={emailRef} type="text" placeholder="Enter Your Email..." />
-        <input
-          ref={passwordRef}
-          type="password"
-          placeholder="Enter Your Password..."
-        />
+      <Navbar />
+      <div className="login-x">
+        <div className="login">
+          <div className="login-input">
+            <h1>Login</h1>
+            <p>
+              or <i>create an account</i>
+            </p>
+            <input
+              ref={emailRef}
+              type="text"
+              placeholder="Enter Your Email..."
+            />
+            <br />
 
-        <Link to="/checkout">
-          <button disabled={loading} onClick={loginButton}>
-            Login
-          </button>
-        </Link>
+            <input
+              ref={passwordRef}
+              type="password"
+              placeholder="Enter Your Password..."
+            />
+            <br />
+
+            <Link to="/checkout">
+              <button disabled={loading} onClick={loginButton}>
+                Login
+              </button>
+            </Link>
+            <p>
+              By clicking on Login, I accept the Terms & Conditions & Privacy
+              Policy
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

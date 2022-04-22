@@ -38,8 +38,9 @@
 .both-content {
     display: flex;
     justify-content: space-between;
-        width: 80%;
-        margin: auto !important;
+    width: 80%;
+    margin: auto !important;
+    /* background:red; */
 }
 .flex-item{
 }

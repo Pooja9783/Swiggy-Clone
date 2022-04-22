@@ -1,4 +1,9 @@
-import { DATA_SUCCESS, ADD_TO_CART, RMV_DATA } from "./actionType";
+import {
+  DATA_SUCCESS,
+  ADD_TO_CART,
+  RMV_DATA,
+  INCREMENT_DATA,
+} from "./actionType";
 const axios = require("axios");
 
 export const dataSucess = (payload) => ({
@@ -17,6 +22,14 @@ export const removeData = (item) => {
     payload: item,
   };
 };
+
+export const incrementData = (value) => {
+  return {
+    type: INCREMENT_DATA,
+    payload: value,
+  };
+};
+
 let url = "http://localhost:5000/data";
 export const getData = (dispatch) => {
   axios

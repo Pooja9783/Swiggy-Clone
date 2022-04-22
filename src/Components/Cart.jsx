@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { addToCart, removeData } from "../Redux/action";
+import { addToCart, removeData, incrementData } from "../Redux/action";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -10,10 +10,12 @@ const Cart = () => {
   const [price, setPrice] = useState(0);
   const total = () => {
     let price = 0;
+    let total = 0;
     getCart.map((ele) => {
-      price += ele.foodprice;
+      let res = (price += ele.foodprice);
+      total = res * ele.quantity;
     });
-    setPrice(price);
+    setPrice(total);
   };
 
   useEffect(() => {
@@ -21,7 +23,7 @@ const Cart = () => {
   }, [total]);
   // console.log(price);
   const handleAddTOCart = (e) => {
-    dispatch(addToCart(e));
+    dispatch(incrementData(e));
   };
   const removeItem = (e) => {
     dispatch(removeData(e));

@@ -1,4 +1,9 @@
-import { DATA_SUCCESS, RMV_DATA, ADD_TO_CART } from "./actionType";
+import {
+  DATA_SUCCESS,
+  RMV_DATA,
+  ADD_TO_CART,
+  INCREMENT_DATA,
+} from "./actionType";
 
 const initData = {
   data: [],
@@ -37,6 +42,18 @@ export const dataReducer = (state = initData, action) => {
         };
       }
       break;
+    case INCREMENT_DATA:
+      const itemIndeInc = state.cart.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      if (state.cart[itemIndeInc].quantity >= 1) {
+        const increment = (state.cart[itemIndeInc].quantity += 1);
+        // console.log([...state.cart, remove]);
+        return {
+          ...state,
+          cart: [...state.cart],
+        };
+      }
     default:
       return state;
   }

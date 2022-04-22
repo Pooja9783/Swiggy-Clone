@@ -98,3 +98,35 @@ a:hover {
   color: #8a584b;
   font-weight: 400;
 }
+@media only screen and (max-width: 968px) {
+  .restaurants .display-data {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .right-content {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .restaurants .display-data {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .left-content{
+
+  }
+  .right-content{
+      display: grid;
+       grid-template-columns: auto auto;
+  }
+  .restaurants .display-data {
+    display: grid;
+    grid-template-columns: auto ;
+  }
+  
+}

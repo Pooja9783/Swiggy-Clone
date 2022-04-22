@@ -12,6 +12,7 @@ export default function Search() {
   useEffect(() => {
     dispatch(getData);
   }, []);
+
   const apiData = useSelector((state) => state.dataReducer.data);
 
   return (

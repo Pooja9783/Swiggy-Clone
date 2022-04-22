@@ -18,7 +18,7 @@ const Restaurants = () => {
     setDa(apiData);
   }, []);
 
-  console.log(da);
+  // console.log(da);
   const ln = apiData.length;
 
   // ~~~~~~~~~~~~~~~Relevance~~~~~~~~~~~~

@@ -21,7 +21,7 @@
   margin: 10px 0px;
   outline: none;
 }
-.login button {
+.login .button button {
   width: 70%;
   height: 40px;
   border: 1px solid #fc8019;

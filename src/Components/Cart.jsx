@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { addToCart, removeData, incrementData } from "../Redux/action";
+import { removeData, deleteData, incrementData } from "../Redux/action";
+import { getData, addToCart } from "../Redux/action";
 
 const Cart = () => {
   const dispatch = useDispatch();
-
   const getCart = useSelector((state) => state.dataReducer.cart);
   const [price, setPrice] = useState(0);
+
   const total = () => {
     let price = 0;
-    let total = 0;
+    let total;
     getCart.map((ele) => {
       let res = (price += ele.foodprice);
       total = res * ele.quantity;
@@ -27,6 +28,10 @@ const Cart = () => {
   };
   const removeItem = (e) => {
     dispatch(removeData(e));
+  };
+
+  const delData = (e) => {
+    dispatch(deleteData(e));
   };
 
   return (
@@ -48,7 +53,9 @@ const Cart = () => {
               >
                 <span
                   style={{ fontSize: "18px" }}
-                  onClick={() => removeItem(e)}
+                  onClick={
+                    e.quantity <= 1 ? () => delData(e.id) : () => removeItem(e)
+                  }
                 >
                   -
                 </span>
@@ -66,7 +73,7 @@ const Cart = () => {
 
         <h3>Subtotal:</h3>
         <p>{price}</p>
-        <Link to={`/checkout`}>
+        <Link to={`/checkout/}`}>
           <button>Checkout</button>
         </Link>
       </div>

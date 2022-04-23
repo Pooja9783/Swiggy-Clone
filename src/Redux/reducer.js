@@ -3,6 +3,7 @@ import {
   RMV_DATA,
   ADD_TO_CART,
   INCREMENT_DATA,
+  DEL_DATA,
 } from "./actionType";
 
 const initData = {
@@ -42,6 +43,7 @@ export const dataReducer = (state = initData, action) => {
         };
       }
       break;
+
     case INCREMENT_DATA:
       const itemIndeInc = state.cart.findIndex(
         (item) => item.id === action.payload.id
@@ -54,6 +56,16 @@ export const dataReducer = (state = initData, action) => {
           cart: [...state.cart],
         };
       }
+      break;
+
+    case DEL_DATA:
+      const data = state.cart.filter((ele) => ele.id !== action.payload);
+
+      return {
+        ...state,
+        cart: data,
+      };
+
     default:
       return state;
   }

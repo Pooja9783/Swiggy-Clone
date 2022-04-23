@@ -21,7 +21,6 @@ const RestaurantDetails = () => {
   const handleAddTOCart = (e) => {
     dispatch(addToCart(e));
   };
-
   return (
     <div>
       <div>

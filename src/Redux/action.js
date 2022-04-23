@@ -3,6 +3,7 @@ import {
   ADD_TO_CART,
   RMV_DATA,
   INCREMENT_DATA,
+  DEL_DATA,
 } from "./actionType";
 const axios = require("axios");
 
@@ -27,6 +28,13 @@ export const incrementData = (value) => {
   return {
     type: INCREMENT_DATA,
     payload: value,
+  };
+};
+
+export const deleteData = (data) => {
+  return {
+    type: DEL_DATA,
+    payload: data,
   };
 };
 

@@ -42,12 +42,13 @@ const Login = () => {
               placeholder="Enter Your Password..."
             />
             <br />
-
-            <Link to="/checkout">
-              <button disabled={loading} onClick={loginButton}>
-                Login
-              </button>
-            </Link>
+            <div className="button">
+              <Link to="/checkout">
+                <button disabled={loading} onClick={loginButton}>
+                  Login
+                </button>
+              </Link>
+            </div>
             <p>
               By clicking on Login, I accept the Terms & Conditions & Privacy
               Policy

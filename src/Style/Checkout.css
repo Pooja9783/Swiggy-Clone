@@ -3,8 +3,8 @@
   background: #e9ecee;
   color: #282c3f;
 }
-.checkout .container {
-  width: 80%;
+.checkout .content {
+  display: flex;
 }
 .checkout .content {
   display: flex;
@@ -148,8 +148,9 @@
   background: white;
   width: 25%;
   /* border: 3px solid red; */
-max-height: 780px;
-overflow-y: scroll;  margin: 20px;
+  max-height: 780px;
+  overflow-y: scroll;
+  margin: 20px;
   display: block;
 }
 
@@ -157,8 +158,12 @@ overflow-y: scroll;  margin: 20px;
   display: flex;
   margin: 15px;
 }
-.checkout .card-x  .img img {
+.checkout .card-x .img {
+  width: 120px;
+}
+.checkout .card-x .img img {
   width: 100px;
+  height: 70px;
   margin-top: 20px;
 }
 .checkout .data .data-add {
@@ -170,21 +175,18 @@ overflow-y: scroll;  margin: 20px;
   cursor: pointer;
   border: 1px solid hsl(106, 44%, 49%);
   color: #60b246;
-width:60%;
- 
-
+  width: 60%;
 }
 .checkout .data .span {
-    display: flex;
-    justify-content: space-between;
-align-items: center;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .checkout .data-span p {
-    font-size: 23px;
-margin: 0px 2px;
-padding: 0px 2px
-
+  font-size: 23px;
+  margin: 0px 2px;
+  padding: 0px;
+  width: 100%;
 }
 .checkout .data .charges {
   margin: 20px;
@@ -195,4 +197,38 @@ padding: 0px 2px
   margin: 20px;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout .content {
+    display: block;
+    margin-top: 20px;
+  }
+  .checkout .content-x {
+    width: 100%;
+    margin: 0px 20px;
+  }
+  .checkout .data {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .checkout .content-x {
+    width: 100%;
+    margin: 0px 20px;
+  }
+.checkout .data {
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 300px) {
+  .checkout .content-x {
+    width: 100%;
+    margin: 0px 20px;
+  }
+.checkout .data {
+    width: 100%;
+}
 }

@@ -31,20 +31,19 @@ export const incrementData = (value) => {
   };
 };
 
-export const deleteData = (data) => {
+export const deleteData = (e) => {
   return {
     type: DEL_DATA,
-    payload: data,
+    payload: e,
   };
 };
 
-let api = "http://localhost:5000/data";
 export const getData = (dispatch) => {
   axios
-    .get(api)
+    .get("https://pooja9783.github.io/swiggy-json-data-api/db.json")
     .then((res) => {
-      // console.log(res.data);
-      dispatch(dataSucess(res.data));
+      console.log(res.data.data);
+      dispatch(dataSucess(res.data.data));
     })
     .catch((err) => console.log(err));
 };

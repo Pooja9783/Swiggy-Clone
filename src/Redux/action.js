@@ -38,10 +38,10 @@ export const deleteData = (data) => {
   };
 };
 
-let url = "http://localhost:5000/data";
+let api = "http://localhost:5000/data";
 export const getData = (dispatch) => {
   axios
-    .get(url)
+    .get(api)
     .then((res) => {
       // console.log(res.data);
       dispatch(dataSucess(res.data));

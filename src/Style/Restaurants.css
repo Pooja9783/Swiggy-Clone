@@ -29,12 +29,11 @@
 }
 
 .restaurants .data {
-  width: 84%;
-  margin: 20px auto !important;
   /* background : rgb(92, 92, 105); */
 }
 
 .restaurants .display-data {
+  /* background:rgb(53, 196, 124); */
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
@@ -43,7 +42,7 @@
   margin: 20px auto !important;
   height: 340px;
   border: 1px solid white;
-  padding: 20px !important;
+  /* padding: 20px !important; */
 }
 .restaurants .card-card:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
@@ -98,18 +97,29 @@ a:hover {
   color: #8a584b;
   font-weight: 400;
 }
-@media only screen and (max-width: 968px) {
-  .restaurants .display-data {
+@media only screen and (max-width: 1089px) {
+ 
+    .restaurants .content {
+    width: 80%;
+    margin: auto !important;
+    display: block;
+    justify-content: space-between;
+  }
+  .restaurants .right-content {
     display: grid;
     grid-template-columns: auto auto;
   }
-  .right-content {
+   .restaurants .display-data {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  .restaurants .right-content {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
   .restaurants .display-data {
     display: grid;
     grid-template-columns: auto;
@@ -117,16 +127,20 @@ a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  .left-content{
 
-  }
-  .right-content{
-      display: grid;
-       grid-template-columns: auto auto;
-  }
+
+
+  
   .restaurants .display-data {
     display: grid;
     grid-template-columns: auto ;
   }
   
+}
+
+@media only screen and (max-width: 300px) {
+  .details .img img {
+    width: 150px;
+  }
+
 }

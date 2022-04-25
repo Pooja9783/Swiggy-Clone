@@ -199,6 +199,16 @@
   justify-content: space-between;
 }
 
+
+
+
+
+
+/* responsive */
+
+
+
+
 @media only screen and (max-width: 768px) {
   .checkout .content {
     display: block;

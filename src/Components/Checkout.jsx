@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { addToCart } from "../Redux/action";
 import "../Style/Checkout.css";
@@ -24,6 +25,12 @@ const Checkout = () => {
 
   const delData = (e) => {
     dispatch(deleteData(e));
+  };
+
+  const success = () => {
+    setTimeout(() => {
+      alert("Your Order Placed!!!");
+    }, 1000);
   };
 
   const total = () => {
@@ -55,8 +62,12 @@ const Checkout = () => {
                       or sign up.
                     </p>
                     <div className="btn">
-                      <button>Login</button>
-                      <button>Sign Up</button>
+                      <Link to="/login">
+                        <button>Login</button>
+                      </Link>
+                      <Link to="/signin">
+                        <button>Sign Up</button>
+                      </Link>
                     </div>
                   </div>
 
@@ -93,7 +104,7 @@ const Checkout = () => {
                     <p>Pay on Delivery</p>
                   </div>
                   <div className="right">
-                    <button>Cash on Delivery</button>
+                    <button onClick={success}>Cash on Delivery</button>
                   </div>
                 </div>
               </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Carousel from "./Carousel";
+import CarouselImg from "./CarouselImg";
 import Restaurants from "./Restaurants";
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <Carousel />
+      <CarouselImg />
       <Restaurants />
     </div>
   );

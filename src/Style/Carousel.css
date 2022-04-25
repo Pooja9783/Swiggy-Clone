@@ -7,30 +7,43 @@
   display: flex;
   width: 80%;
   margin: auto !important;
-  padding: 35px 0px !important;
+  padding: 35px  !important;
 }
 .carousel-img img {
   width: 270px;
-  margin: 0px 66px 0px 0px !important;
+  margin-right: 66px;
 }
 
 
 
 
-@media only screen and (max-width: 968px) {
+@media only screen and (max-width: 1089px) {
   .carousel-img .content-img {
     width: 100%;
-    margin: auto;
     display: grid;
     justify-content: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 20px;
   }
 
   .carousel-img img {
-    width: 170px;
+    width: 130px;
+      margin-right: 20px;
   }
 }
+
+.card{
+  width : 100%;
+  height: 200px;
+  background: white;
+  color : red;
+  font-size: 19px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media only screen and (max-width: 768px) {
   .carousel-img .content-img {
@@ -42,31 +55,34 @@
     gap: 20px;
   }
   .carousel-img img {
-    width: 170px;
+    display: none;
+  }
+  .carousel-img img:first-child {
+    width: 270px;
+    display: block;
+        margin-right: 0px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .carousel-img .content-img {
     width: 100%;
-    margin: auto;
+    margin: auto ;
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
     gap: 40px;
-    margin-left: 55px;
   }
- 
-
-  .carousel-img img {
+   .carousel-img img {
     width: 250px;
+    margin-right: 0px;
   }
 }
 
 @media only screen and (max-width: 300px) {
 .carousel-img .content-img {
   width: 100%;
-  margin: auto;
+  margin: auto ;
   display: grid;
   justify-content: center;
   grid-template-columns: auto;

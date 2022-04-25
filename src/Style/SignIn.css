@@ -1,0 +1,52 @@
+.signin-x {
+    width: 80%;
+    margin: 0px auto;
+    /* background: red; */
+}
+.signin {
+    margin-left: 400px;
+}
+.signin i {
+    color: #fc8019;
+}
+.signin-input {
+    /* background: red; */
+    margin: auto;
+    width: 100%;
+}
+
+.signin input {
+    width: 70%;
+    height: 50px;
+    margin: 10px 0px;
+    outline: none;
+    font-size: 16px;
+}
+
+.signin .button button {
+    width: 70%;
+    height: 40px;
+    border: 1px solid #fc8019;
+    color: #fff;
+    background-color: #fc8019;
+    font-size: 20px;
+}
+
+.signin p {
+    width: 50%;
+    margin: 10px 0px;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 900px) {
+    .signin {
+        margin-left: 100px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .signin {
+        margin-left: 100px;
+    }
+}

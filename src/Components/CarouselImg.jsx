@@ -1,6 +1,8 @@
 import React from "react";
+
 import "../Style/Carousel.css";
-const Carousel = () => {
+
+const CarouselImg = () => {
   return (
     <div>
       <div className="carousel-img">
@@ -27,4 +29,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default CarouselImg;

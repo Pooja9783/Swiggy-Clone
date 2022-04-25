@@ -1,24 +1,16 @@
 import { Link } from "react-router-dom";
-import { useRef, useState } from "react";
-import { login, useAuth } from "../firebase/firebase";
+import { useRef, useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import Loginwithgoogle from "./LoginWithGoogle";
 import "../Style/Login.css";
+
 const Login = () => {
-  const [loading, setLoading] = useState(false);
-  const currentUser = useAuth();
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    let res = JSON.parse(localStorage.getItem("data"));
+    console.log(res);
+  }, []);
 
-  const emailRef = useRef();
-  const passwordRef = useRef();
-
-  async function loginButton() {
-    setLoading(true);
-    try {
-      await login(emailRef.current.value, passwordRef.current.value);
-    } catch {
-      alert("Login Error!");
-    }
-    setLoading(false);
-  }
   return (
     <div>
       <Navbar />
@@ -26,33 +18,29 @@ const Login = () => {
         <div className="login">
           <div className="login-input">
             <h1>Login</h1>
-            <p>
-              or <i>create an account</i>
-            </p>
-            <input
-              ref={emailRef}
-              type="text"
-              placeholder="Enter Your Email..."
-            />
+            <Link to="/signin">
+              <p>
+                or <i>create an account</i>
+              </p>
+            </Link>
+
+            <input type="text" placeholder="Enter Your Email..." />
             <br />
 
-            <input
-              ref={passwordRef}
-              type="password"
-              placeholder="Enter Your Password..."
-            />
+            <input type="password" placeholder="Enter Your Password..." />
             <br />
             <div className="button">
               <Link to="/checkout">
-                <button disabled={loading} onClick={loginButton}>
-                  Login
-                </button>
+                <button>Login</button>
               </Link>
             </div>
             <p>
               By clicking on Login, I accept the Terms & Conditions & Privacy
               Policy
             </p>
+          </div>
+          <div className="googleAuth">
+            <Loginwithgoogle />
           </div>
         </div>
       </div>

@@ -87,7 +87,7 @@ const RestaurantDetails = () => {
                         {getCart.length ? (
                           <Cart />
                         ) : (
-                          <div>
+                          <div className="cart-data-empty">
                             <h1>Cart Empty</h1>
                             <img
                               src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_480/Cart_empty_-_menu_2x_ejjkf2"

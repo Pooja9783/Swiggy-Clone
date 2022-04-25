@@ -85,8 +85,20 @@ const Restaurants = () => {
                         <p>{ele.type}</p>
                       </div>
                       <div className="flex">
-                        <p className="rating">☆ {ele.rating} </p> •
-                        <p>{ele.time} mins </p> •<p>₹ {ele.rate} for Two</p>
+                        <p
+                          className="rating"
+                          style={{
+                            backgroundColor:
+                              ele.rating < 4
+                                ? ele.rating < 3
+                                  ? "red"
+                                  : "orange"
+                                : "green",
+                          }}
+                        >
+                          ☆ {ele.rating}{" "}
+                        </p>{" "}
+                        •<p>{ele.time} mins </p> •<p>₹ {ele.rate} for Two</p>
                       </div>
                       <hr />
                       <p className="coupon">{ele.coupon}</p>

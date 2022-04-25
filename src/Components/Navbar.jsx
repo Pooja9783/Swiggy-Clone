@@ -29,27 +29,30 @@ const Navbar = () => {
         <Toolbar>
           {isMatch ? (
             <>
-              <Typography>
-                <img
-                  src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
-                  alt="img"
-                  style={{ width: "60px" }}
-                />
-              </Typography>
-
+              <Link to="/">
+                <Typography>
+                  <img
+                    src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
+                    alt="img"
+                    style={{ width: "60px" }}
+                  />
+                </Typography>
+              </Link>
               <DrawerComp />
             </>
           ) : (
             <Grid sx={{ placeItems: "center" }} container>
-              <Typography style={{ marginLeft: "100px", display: "flex" }}>
-                <img
-                  className="logo"
-                  src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
-                  alt="img"
-                  style={{ width: "50px" }}
-                />
-                <h5 className="nav-h5">Location</h5>
-              </Typography>
+              <Link to="/">
+                <Typography style={{ marginLeft: "100px", display: "flex" }}>
+                  <img
+                    className="logo"
+                    src="https://www.theknowhowlib.com/wp-content/uploads/2020/05/Swiggy-2.png"
+                    alt="img"
+                    style={{ width: "50px" }}
+                  />
+                  <h5 className="nav-h5">Location</h5>
+                </Typography>
+              </Link>
               <Grid item xs={2}></Grid>
               <Grid item xs={4}>
                 <div className="right-nav">

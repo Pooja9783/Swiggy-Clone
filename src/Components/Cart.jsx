@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeData, deleteData, incrementData } from "../Redux/action";
-import { getData, addToCart } from "../Redux/action";
-
+import "../Style/Cart.css";
 const Cart = () => {
   const dispatch = useDispatch();
   const getCart = useSelector((state) => state.dataReducer.cart);
@@ -36,43 +35,36 @@ const Cart = () => {
 
   return (
     <div>
-      <h1>Cart</h1>
-      <div className="cart">
+      <div className="cart-data">
+        <h1>Cart</h1>
+
         {getCart.map((e, i) => {
           return (
             <div className="cart-item" key={i}>
-              <p>{e.foodname}</p>
-              <b>₹{e.foodprice}</b>
-              <div
-                style={{
-                  background: "gray",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  cursor: "pointer",
-                }}
-              >
-                <span
-                  style={{ fontSize: "18px" }}
-                  onClick={
-                    e.quantity <= 1 ? () => delData(e.id) : () => removeItem(e)
-                  }
-                >
-                  -
-                </span>
-                <span style={{ fontSize: "18px" }}>{e.quantity}</span>
-                <span
-                  style={{ fontSize: "18px" }}
-                  onClick={() => handleAddTOCart(e)}
-                >
-                  +
-                </span>
+              <div className="cart-x">
+                <p>{e.foodname}</p>
+                <div className="cart">
+                  <span
+                    onClick={
+                      e.quantity <= 1
+                        ? () => delData(e.id)
+                        : () => removeItem(e)
+                    }
+                  >
+                    -
+                  </span>
+                  <span>{e.quantity}</span>
+                  <span onClick={() => handleAddTOCart(e)}>+</span>
+                </div>
+                <b>₹{e.foodprice}</b>
               </div>
             </div>
           );
         })}
-
-        <h3>Subtotal:</h3>
-        <p>{price}</p>
+        <div className="total">
+          <h3>Subtotal:</h3>
+          <h3>₹ {price}</h3>
+        </div>
         <Link to={`/checkout/}`}>
           <button>Checkout</button>
         </Link>

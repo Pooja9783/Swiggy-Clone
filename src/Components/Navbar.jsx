@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Style/Navbar.css";
 import { DrawerComp } from "./Drawer";
 import { Link } from "react-router-dom";
@@ -22,7 +22,15 @@ const Navbar = () => {
   const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
   // console.log(isMatch);
   // console.log(theme);
+  let res = JSON.parse(localStorage.getItem("data"));
 
+  // console.log(name);
+
+  useEffect(() => {
+    const handleLogout = () => {
+      localStorage.removeItem("data");
+    };
+  }, []);
   return (
     <div className="Navbar">
       <AppBar style={{ background: "white" }} position="static">
@@ -68,18 +76,23 @@ const Navbar = () => {
                   <p>
                     <i className="bi bi-plus-circle-dotted"></i>Help
                   </p>
-
-                  <Link to="/login">
-                    <p>
-                      {" "}
-                      <i className="bi bi-person"></i>Sign In
-                    </p>
-                  </Link>
+                  {res !== null ? (
+                    <p>{res.name}</p>
+                  ) : (
+                    <Link to="/login">
+                      <p>
+                        {" "}
+                        <i className="bi bi-person"></i>Sign In
+                      </p>
+                    </Link>
+                  )}
                   <Link to="/checkout">
                     <p>
                       <i className="bi bi-bag">{getCart.length}</i>Cart
                     </p>
                   </Link>
+
+                  <p onClick={handleLogout}>logout</p>
                 </div>
               </Grid>
             </Grid>

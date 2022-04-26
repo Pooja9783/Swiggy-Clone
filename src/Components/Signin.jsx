@@ -8,9 +8,9 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   //   console.log(name, email, password);
   let data = {
-    name: name,
-    email: email,
-    password: password,
+    name,
+    email,
+    password,
   };
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const Signin = () => {
               />
               <br />
               <div className="button">
-                <Link to="/checkout">
+                <Link to="/">
                   <button>Sign in</button>
                 </Link>
               </div>

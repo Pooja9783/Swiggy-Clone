@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import Loginwithgoogle from "./LoginWithGoogle";
 import "../Style/Login.css";
 
 const Login = () => {
@@ -56,9 +55,6 @@ const Login = () => {
               By clicking on Login, I accept the Terms & Conditions & Privacy
               Policy
             </p>
-          </div>
-          <div className="googleAuth">
-            <Loginwithgoogle />
           </div>
         </div>
       </div>

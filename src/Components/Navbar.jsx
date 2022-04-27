@@ -26,11 +26,11 @@ const Navbar = () => {
 
   // console.log(name);
 
-  useEffect(() => {
-    const handleLogout = () => {
-      localStorage.removeItem("data");
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleLogout = () => {
+  //     localStorage.removeItem("data");
+  //   };
+  // }, []);
   return (
     <div className="Navbar">
       <AppBar style={{ background: "white" }} position="static">
@@ -92,7 +92,7 @@ const Navbar = () => {
                     </p>
                   </Link>
 
-                  <p onClick={handleLogout}>logout</p>
+                  {/* <p onClick={handleLogout}>logout</p> */}
                 </div>
               </Grid>
             </Grid>

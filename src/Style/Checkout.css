@@ -209,7 +209,7 @@
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 868px) {
   .checkout .content {
     display: block;
     margin-top: 20px;
@@ -229,8 +229,35 @@
     margin: 0px 20px;
   }
 .checkout .data {
-    width: 100%;
+    width: 80%;
 }
+.checkout img {
+ display:none;
+}
+.home-add {
+  width: 70%;
+  border: 1px solid #d7d8dd;
+  margin-left: 15px;
+      padding: 10px;
+}
+.checkout .payment {
+    width: 70%;
+    padding: 5px;
+}
+.checkout .address {
+      width: 70%;
+}
+.checkout .login-one-step {
+        width: 60%;
+}
+.payment .payment-method {
+  display: block;
+}
+.checkout .payment-method .right button {
+          width: 100%;
+          margin-top: 10px;
+}
+
 }
 
 @media only screen and (max-width: 300px) {
@@ -238,7 +265,5 @@
     width: 100%;
     margin: 0px 20px;
   }
-.checkout .data {
-    width: 100%;
-}
+
 }

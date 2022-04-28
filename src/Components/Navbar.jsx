@@ -9,13 +9,10 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Tabs,
-  Tab,
   useTheme,
   useMediaQuery,
 } from "@material-ui/core";
 const Navbar = () => {
-  const [val, setVal] = useState();
   const theme = useTheme();
   const getCart = useSelector((state) => state.dataReducer.cart);
 
@@ -23,14 +20,8 @@ const Navbar = () => {
   // console.log(isMatch);
   // console.log(theme);
   let res = JSON.parse(localStorage.getItem("data"));
+  // console.log(res.name);
 
-  // console.log(name);
-
-  // useEffect(() => {
-  //   const handleLogout = () => {
-  //     localStorage.removeItem("data");
-  //   };
-  // }, []);
   return (
     <div className="Navbar">
       <AppBar style={{ background: "white" }} position="static">
@@ -76,21 +67,17 @@ const Navbar = () => {
                   <p>
                     <i className="bi bi-plus-circle-dotted"></i>Help
                   </p>
-                  {res !== null ? (
-                    <p>{res.name}</p>
-                  ) : (
-                    <Link to="/login">
-                      <p>
-                        {" "}
-                        <i className="bi bi-person"></i>Sign In
-                      </p>
-                    </Link>
-                  )}
-                  <Link to="/checkout">
+                  <Link to="/signin">
                     <p>
-                      <i className="bi bi-bag">{getCart.length}</i>Cart
+                      {" "}
+                      <i className="bi bi-person"></i>
+                      {res && res.name ? res.name : "Signin"}
                     </p>
                   </Link>
+
+                  <p>
+                    <i className="bi bi-bag">{getCart.length}</i>Cart
+                  </p>
 
                   {/* <p onClick={handleLogout}>logout</p> */}
                 </div>

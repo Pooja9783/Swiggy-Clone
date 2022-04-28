@@ -16,11 +16,12 @@ export const dataReducer = (state = initData, action) => {
     case DATA_SUCCESS:
       return { ...state, data: [...action.payload] };
       break;
+
     case ADD_TO_CART:
       const itemIndex = state.cart.findIndex(
         (item) => item.id === action.payload.id
       );
-      console.log(itemIndex);
+      // console.log(itemIndex);
       if (itemIndex >= 0) {
         state.cart[itemIndex].quantity += 1;
       } else {

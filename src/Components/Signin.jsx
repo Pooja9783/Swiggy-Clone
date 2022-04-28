@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import "../Style/SignIn.css";
@@ -6,17 +6,25 @@ const Signin = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const nevigate = useNavigate();
+
   //   console.log(name, email, password);
   let data = {
     name,
     email,
     password,
   };
+  const signInHandle = (e) => {
+    e.preventDefault();
+    if (name == "" || email == "" || password == "") {
+      alert("Your form is Empty please fill the form...");
+    } else {
+      let res = localStorage.setItem("data", JSON.stringify(data));
+      console.log(res);
+      nevigate("/login");
+    }
+  };
 
-  useEffect(() => {
-    let res = localStorage.setItem("data", JSON.stringify(data));
-    console.log(res);
-  }, [data]);
   return (
     <div>
       <Navbar />
@@ -51,9 +59,7 @@ const Signin = () => {
               />
               <br />
               <div className="button">
-                <Link to="/">
-                  <button>Sign in</button>
-                </Link>
+                <button onClick={signInHandle}>Sign in</button>
               </div>
               <p>
                 By clicking on Login, I accept the Terms & Conditions & Privacy

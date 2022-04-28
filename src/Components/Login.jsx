@@ -9,16 +9,22 @@ const Login = () => {
   const [email2, setEmail2] = useState("");
   const [password2, setPassword2] = useState("");
   // console.log(email, password);
-  useEffect(() => {
+
+  const loginHandle = (e) => {
+    e.preventDefault();
     let res = JSON.parse(localStorage.getItem("data"));
-    // console.log(res);
-    if (res != null) {
-      const { email, password } = res;
+    const { email, password } = res;
+    // console.log(email);
+    if (email == "" || password == "") {
+      alert("Your Form is empty please fillthe form...");
+    } else {
       if (email === email2 && password === password2) {
         nevigate("/checkout");
+      } else {
+        alert("Your Password did not match..");
       }
     }
-  }, []);
+  };
 
   return (
     <div>
@@ -47,9 +53,7 @@ const Login = () => {
             />
             <br />
             <div className="button">
-              <Link to="/checkout">
-                <button>Login</button>
-              </Link>
+              <button onClick={loginHandle}>Login</button>
             </div>
             <p>
               By clicking on Login, I accept the Terms & Conditions & Privacy

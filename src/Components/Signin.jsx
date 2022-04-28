@@ -16,11 +16,11 @@ const Signin = () => {
   };
   const signInHandle = (e) => {
     e.preventDefault();
-    if (name == "" || email == "" || password == "") {
+    if (name === "" || email === "" || password === "") {
       alert("Your form is Empty please fill the form...");
     } else {
       let res = localStorage.setItem("data", JSON.stringify(data));
-      console.log(res);
+      // console.log(res);
       nevigate("/login");
     }
   };

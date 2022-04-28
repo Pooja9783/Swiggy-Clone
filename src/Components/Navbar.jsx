@@ -22,6 +22,12 @@ const Navbar = () => {
   let res = JSON.parse(localStorage.getItem("data"));
   // console.log(res.name);
 
+  function logoutHandle() {
+    setTimeout(() => {
+      localStorage.removeItem("data");
+    }, 300);
+  }
+
   return (
     <div className="Navbar">
       <AppBar style={{ background: "white" }} position="static">
@@ -74,12 +80,17 @@ const Navbar = () => {
                       {res && res.name ? res.name : "Signin"}
                     </p>
                   </Link>
-
-                  <p>
-                    <i className="bi bi-bag">{getCart.length}</i>Cart
-                  </p>
-
-                  {/* <p onClick={handleLogout}>logout</p> */}
+                  <Link to="/checkout">
+                    <p>
+                      {getCart.length > 0 ? (
+                        <i className="i">{getCart.length}</i>
+                      ) : (
+                        <i className="bi bi-bag"></i>
+                      )}
+                      Cart
+                    </p>
+                  </Link>
+                  {/* <p onClick={logoutHandle}>logout</p> */}
                 </div>
               </Grid>
             </Grid>

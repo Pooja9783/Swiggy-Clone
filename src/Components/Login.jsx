@@ -17,12 +17,11 @@ const Login = () => {
     // console.log(email);
     if (email == "" || password == "") {
       alert("Your Form is empty please fillthe form...");
+    }
+    if (email === email2 && password === password2) {
+      nevigate("/checkout");
     } else {
-      if (email === email2 && password === password2) {
-        nevigate("/checkout");
-      } else {
-        alert("Your Password did not match..");
-      }
+      alert("Your Password did not match...");
     }
   };
 

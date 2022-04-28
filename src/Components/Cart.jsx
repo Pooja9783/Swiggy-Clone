@@ -13,7 +13,7 @@ const Cart = () => {
     let total;
     getCart.map((ele) => {
       let res = (price += ele.foodprice);
-      total = res * ele.quantity;
+      return (total = res * ele.quantity);
     });
     setPrice(total);
   };

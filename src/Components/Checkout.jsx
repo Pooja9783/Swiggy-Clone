@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { addToCart } from "../Redux/action";
 import "../Style/Checkout.css";
@@ -10,7 +10,7 @@ import { removeData, deleteData, incrementData } from "../Redux/action";
 const Checkout = () => {
   const [price, setPrice] = useState(0);
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   useEffect(() => {
     dispatch(addToCart);
   }, []);
@@ -30,8 +30,10 @@ const Checkout = () => {
   const success = () => {
     setTimeout(() => {
       alert("Your Order Placed!!!");
+      navigate("/");
     }, 1000);
   };
+  let res = JSON.parse(localStorage.getItem("data"));
 
   const total = () => {
     let price = 0;
@@ -62,12 +64,18 @@ const Checkout = () => {
                       or sign up.
                     </p>
                     <div className="btn">
-                      <Link to="/login">
-                        <button>Login</button>
-                      </Link>
-                      <Link to="/signin">
-                        <button>Sign Up</button>
-                      </Link>
+                      {res && res.email ? (
+                        <b>Eamil : {res.email}</b>
+                      ) : (
+                        <div>
+                          <Link to="/login">
+                            <button>Login</button>
+                          </Link>
+                          <Link to="/signin">
+                            <button>Sign Up</button>
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   </div>
 

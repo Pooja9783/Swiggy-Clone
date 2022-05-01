@@ -3,24 +3,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeData, deleteData, incrementData } from "../Redux/action";
 import "../Style/Cart.css";
+import Buttons from "../Screen/Buttons";
+
 const Cart = () => {
   const dispatch = useDispatch();
   const getCart = useSelector((state) => state.dataReducer.cart);
   const [price, setPrice] = useState(0);
 
-  const total = () => {
-    let price = 0;
+  const totalPrice = () => {
+    let priceData = 0;
     let total;
     getCart.map((ele) => {
-      let res = (price += ele.foodprice);
+      let res = (priceData += ele.foodprice);
       return (total = res * ele.quantity);
     });
     setPrice(total);
   };
 
   useEffect(() => {
-    total();
-  }, [total]);
+    totalPrice();
+  }, [totalPrice]);
   // console.log(price);
   const handleAddTOCart = (e) => {
     dispatch(incrementData(e));
@@ -66,7 +68,9 @@ const Cart = () => {
           <h3>₹ {price}</h3>
         </div>
         <Link to={`/checkout/}`}>
-          <button>Checkout</button>
+          <Buttons variant="green" size={"xs"}>
+            Checkout
+          </Buttons>
         </Link>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { addToCart } from "../Redux/action";
 import "../Style/Checkout.css";
 import Footer from "./Footer";
 import { removeData, deleteData, incrementData } from "../Redux/action";
-
+import Buttons from "../Screen/Buttons";
 const Checkout = () => {
   const [price, setPrice] = useState(0);
   const dispatch = useDispatch();
@@ -67,12 +67,16 @@ const Checkout = () => {
                       {res && res.email ? (
                         <b>Eamil : {res.email}</b>
                       ) : (
-                        <div>
+                        <div className="btn">
                           <Link to="/login">
-                            <button>Login</button>
+                            <Buttons variant="green" size={"sm"}>
+                              Login
+                            </Buttons>{" "}
                           </Link>
                           <Link to="/signin">
-                            <button>Sign Up</button>
+                            <Buttons variant="green" size={"sm"}>
+                              Signin
+                            </Buttons>{" "}
                           </Link>
                         </div>
                       )}
@@ -112,7 +116,9 @@ const Checkout = () => {
                     <p>Pay on Delivery</p>
                   </div>
                   <div className="right">
-                    <button onClick={success}>Cash on Delivery</button>
+                    <Buttons variant="green" size={"sx"} onClick={success}>
+                      Cash on Delivery
+                    </Buttons>{" "}
                   </div>
                 </div>
               </div>

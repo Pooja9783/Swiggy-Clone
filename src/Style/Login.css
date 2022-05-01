@@ -21,13 +21,7 @@
   margin: 10px 0px;
   outline: none;
 }
-.login .button button {
-  width: 70%;
-  height: 40px;
-  border: 1px solid #fc8019;
-  color: #fff;
-  background-color: #fc8019;
-}
+
 .login p {
   width: 50%;
   margin: 10px 0px;

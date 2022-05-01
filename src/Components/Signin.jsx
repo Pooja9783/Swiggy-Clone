@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import "../Style/SignIn.css";
+import Buttons from "../Screen/Buttons";
 const Signin = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -59,7 +60,9 @@ const Signin = () => {
               />
               <br />
               <div className="button">
-                <button onClick={signInHandle}>Sign in</button>
+                <Buttons variant="orange" size={"sx"} onClick={signInHandle}>
+                  Sign in
+                </Buttons>
               </div>
               <p>
                 By clicking on Login, I accept the Terms & Conditions & Privacy

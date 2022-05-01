@@ -6,6 +6,7 @@ import { getData, addToCart } from "../Redux/action";
 import Cart from "./Cart";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Buttons from "../Screen/Buttons";
 
 const RestaurantDetails = () => {
   const { id } = useParams();
@@ -69,11 +70,13 @@ const RestaurantDetails = () => {
                                     </div>
                                     <div className="right-y">
                                       <img src={ele.imgfood} alt="" />
-                                      <button
+                                      <Buttons
+                                        variant="white"
+                                        size={"sx"}
                                         onClick={() => handleAddTOCart(ele)}
                                       >
                                         Add
-                                      </button>
+                                      </Buttons>
                                     </div>
                                   </div>
                                   <hr />

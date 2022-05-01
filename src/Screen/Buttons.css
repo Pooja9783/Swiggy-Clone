@@ -1,0 +1,46 @@
+.btn-white {
+    border: 1px solid #7d7d7e;
+    width: 70px;
+    padding: 10px !important;
+    background: white;
+    color: rgb(95, 230, 113);
+    text-align: center;
+    position: relative;
+    top: -29px;
+    left: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    overflow: hidden;
+    
+}
+
+.btn-green {
+    text-align: center;
+    padding: 8px 12px;
+    line-height: 1.2;
+    cursor: pointer;
+    border: 1px solid #60b246;
+    color: white !important;
+    margin-right: 20px;
+    background-color: #60b246 !important;
+}
+
+.btn-orange {
+    width: 70%;
+    height: 40px;
+    border: 1px solid #fc8019;
+    color: #fff;
+    background-color: #fc8019;
+}
+
+.btn-xs {
+    font-size: 18px;
+}
+
+.btn-sm {
+    font-size: 20px;
+}
+
+.btn-lg {
+    font-size: 22px;
+}

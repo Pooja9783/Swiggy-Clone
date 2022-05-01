@@ -71,20 +71,7 @@
   height: 100px;
   border-radius: 20px;
 }
-.food .right-y button {
-  border: 1px solid #7d7d7e;
-  width: 70px;
-  padding: 10px !important;
-  background: white;
-  color: rgb(95, 230, 113);
-  text-align: center;
-  position: relative;
-  top: -29px;
-  left: 23px;
-  font-weight: 800;
-  text-transform: uppercase;
-  overflow: hidden;
-}
+
 .food hr {
   margin-top: 20px !important;
 }
@@ -132,6 +119,7 @@
   .details {
     height: 400px;
   }
+ 
   .details .container-x {
     display: block;
   }
@@ -147,4 +135,7 @@
   .details {
     height: 500px;
   }
+  .food .content-food {
+    width: 70%;
+    margin: 20px auto !important;  }
 }

@@ -42,7 +42,7 @@ export const getData = (dispatch) => {
   axios
     .get("https://pooja9783.github.io/swiggy-json-data-api/db.json")
     .then((res) => {
-      console.log(res.data.data);
+      // console.log(res.data.data);
       dispatch(dataSucess(res.data.data));
     })
     .catch((err) => console.log(err));

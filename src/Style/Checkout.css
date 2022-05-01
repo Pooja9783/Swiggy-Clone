@@ -40,21 +40,9 @@
   margin-left: 15px;
 }
 
-.checkout .ac button {
-  text-align: center;
-  padding: 8px 35px 12px;
-  line-height: 1.2;
-  cursor: pointer;
-}
-.checkout .ac button:nth-child(1) {
-  border: 1px solid #60b246;
-  color: #60b246;
-  margin-right: 20px;
-}
-.checkout .ac button:nth-child(2) {
-  border: 1px solid #60b246;
-  background-color: #60b246;
-  color: #fff;
+.checkout .btn{
+  margin: 10px 0px;
+  display: flex;
 }
 
 /* address */
@@ -130,17 +118,10 @@
 
 .checkout .payment-method .right {
   width: 40%;
+    margin-top: 70px;
 }
 
-.checkout .payment-method .right button {
-  margin-top: 70px;
-  border: 1px solid #60b246;
-  background-color: #60b246;
-  color: #fff;
-  width: 70%;
-  font-weight: 900;
-  height: 60px;
-}
+
 
 /*  */
 

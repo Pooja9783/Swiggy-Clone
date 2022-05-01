@@ -7,31 +7,25 @@ const Restaurants = () => {
   const [value, setValue] = useState([]);
   const dispatch = useDispatch();
 
+  const apiData = useSelector((state) => state.dataReducer.data);
+  const ln = apiData.length;
+
   useEffect(() => {
     dispatch(getData);
   }, []);
 
-  const apiData = useSelector((state) => state.dataReducer.data);
+  useEffect(() => {
+    setValue(apiData);
+  });
 
-  const ln = apiData.length;
-
-  // ~~~~~~~~~~~~~~~Relevance~~~~~~~~~~~~
-
-  // const relevance = () => {};
-
-  // ~~~~~~~~~~~~~~~Rating~~~~~~~~~~~~~
-  const rating = (e) => {
-    if (e === "r") {
+  const sortData = (m) => {
+    if (m === "r") {
       let res = apiData.sort((a, b) => {
         return b.rating - a.rating;
       });
       // console.log(res);
       setValue([...res]);
-    }
-  };
-  //~~~~~~~~~~~~~~~~~~High to Low~~~~~~~~~~~~~~~
-  const hTol = (m) => {
-    if (m === "h") {
+    } else if (m === "h") {
       let res = apiData.sort((a, b) => {
         return b.rate - a.rate;
       });
@@ -41,18 +35,14 @@ const Restaurants = () => {
         return a.rate - b.rate;
       });
       setValue([...res]);
-    }
-  };
-
-  //~~~~~~~~~~~~~~~~~~Delivery Time~~~~~~~~~~~~~~~
-  const deliveryTime = (t) => {
-    if (t === "t") {
+    } else if (m === "t") {
       let res = apiData.sort((a, b) => {
         return a.time - b.time;
       });
       setValue([...res]);
     }
   };
+
   return (
     <div>
       <div className="restaurants">
@@ -61,18 +51,17 @@ const Restaurants = () => {
             <h2>{ln} restaurants</h2>
           </div>
           <div className="right-content">
-            <p>Relevance</p>
-            <p onClick={() => deliveryTime("t")}>Delivery Time</p>
-            <p onClick={() => rating("r")}>Rating</p>
-            <p onClick={() => hTol("l")}>Cost: Low To High</p>
-            <p onClick={() => hTol("h")}>Cost: High To Low</p>
-            <p>Filters</p>
+            <p onClick={() => sortData("all")}>Relevance</p>
+            <p onClick={() => sortData("t")}>Delivery Time</p>
+            <p onClick={() => sortData("r")}>Rating</p>
+            <p onClick={() => sortData("l")}>Cost: Low To High</p>
+            <p onClick={() => sortData("h")}>Cost: High To Low</p>
           </div>
         </div>
         <hr />
         <div className="data">
           <div className="display-data">
-            {apiData.map((ele, i) => {
+            {value.map((ele, i) => {
               return (
                 <div key={i} className="card-card">
                   <Link to={`/restaurantdetails/${ele.id}`}>

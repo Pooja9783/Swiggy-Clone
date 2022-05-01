@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import "../Style/Login.css";
-
+import Buttons from "../Screen/Buttons";
 const Login = () => {
   const nevigate = useNavigate();
   const [data, setData] = useState([]);
@@ -52,7 +52,9 @@ const Login = () => {
             />
             <br />
             <div className="button">
-              <button onClick={loginHandle}>Login</button>
+              <Buttons variant="orange" size={"sm"} onClick={loginHandle}>
+                Login
+              </Buttons>
             </div>
             <p>
               By clicking on Login, I accept the Terms & Conditions & Privacy

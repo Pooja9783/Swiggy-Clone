@@ -7,9 +7,6 @@
   display: flex;
   justify-content: space-between;
 }
-.restaurants .left-content {
-}
-
 .restaurants .right-content {
   display: flex;
 }

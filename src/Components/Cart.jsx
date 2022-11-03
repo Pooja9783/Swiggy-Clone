@@ -23,6 +23,7 @@ const Cart = () => {
   useEffect(() => {
     totalPrice();
   }, [totalPrice]);
+
   // console.log(price);
   const handleAddTOCart = (e) => {
     dispatch(incrementData(e));

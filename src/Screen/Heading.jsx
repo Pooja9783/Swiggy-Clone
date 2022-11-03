@@ -6,7 +6,6 @@ const Headings = (props) => {
   return (
     <>
       <h1 className={`h1-${variant} h1-${size}`}>{props.children}</h1>;
-      <h2 className={`h2-${variant} h2-${size}`}>{props.children}</h2>;
     </>
   );
 };

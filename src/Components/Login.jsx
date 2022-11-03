@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import "../Style/Login.css";
 import Buttons from "../Screen/Buttons";
+import Headings from "../Screen/Heading";
+
 const Login = () => {
   const nevigate = useNavigate();
   const [data, setData] = useState([]);
@@ -31,7 +33,9 @@ const Login = () => {
       <div className="login-x">
         <div className="login">
           <div className="login-input">
-            <h1>Login</h1>
+            <Headings variant="primary" size={"sx"}>
+              Login
+            </Headings>
             <Link to="/signin">
               <p>
                 or <i>create an account</i>

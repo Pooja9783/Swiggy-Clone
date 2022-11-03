@@ -46,7 +46,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
 .restaurants img {
-  width: 275px;
+  width: 200px;
 }
 .restaurants .all-data {
   margin: 5px 0px !important;
@@ -124,10 +124,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-
-
-
-  
+ 
   .restaurants .display-data {
     display: grid;
     grid-template-columns: auto ;

@@ -38,12 +38,13 @@ export default function Search() {
             <div className="display-data">
               {apiData
                 .filter((food) => {
-                  if (search == "") {
+                  if (search === "") {
                     return "";
                   } else {
                     const res = food.title
                       .toLowerCase()
                       .includes(search.toLowerCase());
+
                     return res;
                   }
                 })

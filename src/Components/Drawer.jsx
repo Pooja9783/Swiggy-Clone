@@ -8,9 +8,9 @@ import {
   List,
   ListItemIcon,
   ListItemText,
-} from "@material-ui/core";
+} from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 
-import MenuIcon from "@material-ui/icons/Menu";
 function DrawerComp() {
   const [open, setOpen] = useState(false);
   const getCart = useSelector((state) => state.dataReducer.cart);

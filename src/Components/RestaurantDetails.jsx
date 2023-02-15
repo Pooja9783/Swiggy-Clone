@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getData, addToCart } from "../Redux/action";
 import Cart from "./Cart";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import Buttons from "../Screen/Buttons";
 
 const RestaurantDetails = () => {
@@ -104,7 +104,7 @@ const RestaurantDetails = () => {
                         )}
                       </div>
                     </div>
-                    <Footer />
+                    {/* <Footer /> */}
                   </div>
                 );
               })}

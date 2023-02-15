@@ -11,7 +11,7 @@ import {
   Typography,
   useTheme,
   useMediaQuery,
-} from "@material-ui/core";
+} from "@mui/material";
 const Navbar = () => {
   const theme = useTheme();
   const getCart = useSelector((state) => state.dataReducer.cart);

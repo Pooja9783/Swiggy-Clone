@@ -4,7 +4,10 @@ import { getData } from "../Redux/action";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import "../Style/Search.css";
-import ClearIcon from "@material-ui/icons/Clear";
+import ClearIcon from "@mui/icons-material/Clear";
+
+
+
 export default function Search() {
   const [search, setSearch] = useState("");
   //   console.log(search);

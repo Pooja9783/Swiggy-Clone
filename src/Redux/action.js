@@ -5,7 +5,8 @@ import {
   INCREMENT_DATA,
   DEL_DATA,
 } from "./actionType";
-const axios = require("axios");
+import axios from 'axios';
+
 
 export const dataSucess = (payload) => ({
   type: DATA_SUCCESS,

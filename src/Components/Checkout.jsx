@@ -4,10 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { addToCart } from "../Redux/action";
 import "../Style/Checkout.css";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import { removeData, deleteData, incrementData } from "../Redux/action";
 import Buttons from "../Screen/Buttons";
+
+
 const Checkout = () => {
+  
   const [price, setPrice] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -168,7 +171,7 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
